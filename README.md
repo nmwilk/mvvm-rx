@@ -1,3 +1,3 @@
 # mvvm-rx
 
-![Demo](http://imgur.com/a/7KjGj)
+![Demo](http://i.imgur.com/8cTinGV.mp4)

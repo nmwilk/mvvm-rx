@@ -1,3 +1,3 @@
 # mvvm-rx
 
-![Demo](http://i.imgur.com/8cTinGV.gif?1)
+![Demo](https://raw.githubusercontent.com/nmwilk/mvvm-rx/master/output.gif)

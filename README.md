@@ -1,3 +1,3 @@
 # mvvm-rx
 
-![Demo](http://i.imgur.com/8cTinGV.gif?1)
+![alt tag](http://imgur.com/a/7KjGj)

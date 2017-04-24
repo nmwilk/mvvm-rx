@@ -3,6 +3,7 @@ package com.nmwilkinson.mvvm_rx
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
+import android.widget.Toast
 import com.jakewharton.rxbinding2.view.clicks
 import com.jakewharton.rxbinding2.widget.textChanges
 import io.reactivex.android.schedulers.AndroidSchedulers
@@ -27,7 +28,7 @@ class MainActivity : AppCompatActivity() {
                 .subscribe({
                     submitButton.isEnabled = it
                 }, {
-                    throw IllegalStateException("$it")
+                    Toast.makeText(this@MainActivity, "Error: ${it.message}", Toast.LENGTH_LONG).show()
                 }))
 
         subscriptions.add(viewModel().getUiState()

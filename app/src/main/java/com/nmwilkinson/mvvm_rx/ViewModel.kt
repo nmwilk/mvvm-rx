@@ -5,6 +5,7 @@ import io.reactivex.functions.BiFunction
 import io.reactivex.subjects.BehaviorSubject
 
 class ViewModel(val api: Api) {
+    private val ipRegex = Regex("^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$")
     private val ipAddress: BehaviorSubject<String> = BehaviorSubject.create()
     private val ipSubmitted: BehaviorSubject<String> = BehaviorSubject.create()
     private val uiState: BehaviorSubject<State> = BehaviorSubject.create()
@@ -35,12 +36,8 @@ class ViewModel(val api: Api) {
     }
 
     fun validateIp(value: String): Boolean {
-        return value.validIp()
+        return ipRegex.matches(value)
     }
 
     data class State(val working: Boolean = false, val validIp: Boolean = false, val country: String = "")
-}
-
-private fun String.validIp(): Boolean {
-    return Regex("^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$").matches(this)
 }

@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">MVVM-RX</string>
+    <string name="enter_ip_address">Enter IP address</string>
 </resources>

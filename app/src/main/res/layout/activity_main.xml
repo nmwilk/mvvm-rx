@@ -13,12 +13,13 @@
 
         <EditText
             android:id="@+id/valueField"
-            android:lines="1"
-            android:inputType="textCapWords"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/default_margin_horz"
             android:layout_marginStart="@dimen/default_margin_horz"
+            android:hint="@string/enter_ip_address"
+            android:inputType="textCapWords"
+            android:lines="1"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
@@ -40,11 +41,11 @@
             android:indeterminate="true" />
 
         <TextView
-            android:layout_marginTop="40dp"
             android:id="@+id/countryField"
-            android:textSize="30sp"
-            android:gravity="center_horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:gravity="center_horizontal"
+            android:textSize="30sp" />
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

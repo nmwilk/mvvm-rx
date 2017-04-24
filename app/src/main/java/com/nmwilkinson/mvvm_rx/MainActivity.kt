@@ -33,9 +33,9 @@ class MainActivity : AppCompatActivity() {
 
         subscriptions.add(viewModel().getUiState()
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe({ state ->
-                    progressView.visibility = if (state.working) View.VISIBLE else View.GONE
-                    countryField.text = state.country
+                .subscribe({ (working, _, country) ->
+                    progressView.visibility = if (working) View.VISIBLE else View.GONE
+                    countryField.text = country
                 }, {
                     throw IllegalStateException("$it")
                 }))
